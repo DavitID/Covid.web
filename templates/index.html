@@ -1,0 +1,50 @@
+ {% import 'ndas.html' as sirah %}
+ <!DOCTYPE html>
+ <html>
+	{{ sirah.head(title) }}
+	<body class="bg-light">
+		<!-- Ndak penting
+		<p>Positif: {{ positip }}</p>
+		<p>Sembuh: {{ sembuh }}</p>
+		<p>Meninggal: {{ death }}</p>
+		-->
+		{{ sirah.jumbo(awal) }}
+		<div class="container">
+			<div class="card shadow-shorter">
+				<div class="card-body">
+					<h4 class=" card-title text-uppercase font-awal text-center">Indonesia</h4>
+					<hr class="display-4 bg-dark">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6">
+								<p class="font-ingfo text-success h5">Sembuh</p>
+							</div>
+							<div class="col-md-6">
+								<p class="text-right h5 text-dark">{{ sembuh }}</p>
+							</div><br><br><br>
+							<div class="col-md-6">
+								<p class="font-ingfo text-danger h5">Meninggal</p>
+							</div>
+							<div class="col-md-6">
+								<p class="text-dark h5 text-right">{{ death }}</p>
+							</div><br><br><br>
+							<div class="col-md-6">
+								<p class="font-ingfo text-warning h5">Positif</p>
+							</div>
+							<div class="col-md-6">
+								<p class="text-dark h5 text-right">{{ positip }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><br>
+    <p class="text-center text-dark">Ingin melihat data provinsi?<a class="text-primary" href="{{ url_for('provinsi') }}">Klik disini</a></p><br>
+
+		<div class="col-md-12">
+			<div class="jumbotron bg-dark">
+				<p class="text-light text-center text-uppercase font-des h4">Thanks for using :)</p>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,15 @@
+ {% macro head(title) %}
+ <head>
+	 <meta charset="utf-8"/>
+	 <meta name="viewport" content="width=device-width, initial-scale=1" />
+	 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+	 <link rel="stylesheet" href="{{ url_for('static', filename='boos.css') }}"/>
+	 <title>Corona Web</title>
+</head>
+{% endmacro %}
+
+{% macro jumbo(awal) %}
+<div class="jumbotron bg-dark">
+  <p class="h2 text-center text-bold font-awal text-uppercase text-light font-bold">Covid-19</p>
+</div><br><br>
+{% endmacro %}

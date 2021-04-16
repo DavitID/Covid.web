@@ -1,0 +1,63 @@
+ {% import "ndas.html" as core %} 
+ <html>
+	 <head>
+     {{ core.head(title) }}
+		 <title>Provinsi</title>
+	 </head>
+	 <body>
+     {{ core.jumbo(awal) }}
+     <!-- Abaikan ini ndak penting
+		 {% for hasil in jeson %}
+		 	<p>Kode: {{ hasil["attributes"]["Kode_Provi"] }}</p>
+			<p>Provinsi: {{ hasil["attributes"]["Provinsi"] }}</p>
+			<p>Positip: {{ hasil["attributes"]["Kasus_Posi"] }}</p>
+			<p>Mokad: {{ hasil["attributes"]["Kasus_Meni"] }}</p>
+			<p>Sembuh: {{ hasil["attributes"]["Kasus_Semb"] }}</p><br>
+		 {% endfor %}
+     -->
+     {% for hasil in jeson %}
+       <div class="container">
+         <div class="card shadow-shorter">
+           <div class="card-body">
+             <h4 class="card-title text-uppercase font-awal text-center">{{ hasil["attributes"]["Provinsi"] }}</h4>
+             <hr class="display-4 bg-dark">
+             <div class="container"> 
+               <div class="row">
+                 <div class="col-md-6">
+                   <p class="text-left text-bold text-success h5">Sembuh</p>
+                 </div>
+                 <div class="col-md-6">
+                   <p class="text-right text-dark h5">{{ hasil["attributes"]["Kasus_Semb"] }}</p><br><br><br>
+                 </div>
+                 <div class="col-md-6">
+                   <p class="text-left text-bold text-danger h5">Meninggal</p>
+                 </div>
+                 <div class="col-md-6">
+                   <p class="text-right text-dark h5">{{ hasil["attributes"]["Kasus_Meni"] }}</p><br><br><br>
+                 </div>
+                 <div class="col-md-6">
+                   <p class="text-left text-bold text-warning h5">Positif</p>
+                 </div>
+                 <div class="col-md-6">
+                   <p class="text-right text-dark h5">{{ hasil["attributes"]["Kasus_Posi"] }}</p>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+         </div><br><br>
+     {% endfor %}
+
+     <center>
+       <a href="{{ url_for('index') }}"
+         <button type="button" class="btn btn-primary rounded-pill">Kembali</button>
+       </a>
+     </center><br><br><br>
+
+     <div class="col-md-12">
+       <div class="jumbotron bg-dark">
+         <p class="text-light text-center font-des text-uppercase h4">Thanks for using :)</p>
+       </div>
+     </div>
+	</body>
+</html>

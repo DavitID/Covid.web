@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import url("https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous");
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Zen+Dots&display=swap');
+
+.font-awal {
+	font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.font-des {
+	font-family: 'Dosis', sans-serif;
+}
+
+.font-negara {
+	font-family: 'Zen Dots', cursive;
+}
+
+.font-ingfo {
+	font-family: 'Inconsolata', monospace;
+    font-family: 'Zen Dots', cursive;
+}
+
+.shadow-shorter {
+  box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+              0 2px 2px rgba(0,0,0,0.11), 
+              0 4px 4px rgba(0,0,0,0.11), 
+              0 6px 8px rgba(0,0,0,0.11),
+              0 8px 16px rgba(0,0,0,0.11);
+}
